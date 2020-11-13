@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Магазин</title>
+        <style>
+            .block1 { 
+                width: 200px;
+                height: 200px; /*square*/
+                background: rgb(2, 61, 117);
+                padding: 5px;
+                padding-right: 5px; 
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 25%;
+            }
+            .block1:hover {
+                transform: rotate(15deg);
+            }
+
+            .block2 { 
+                width: 200px; 
+                height: 200px; /*square*/
+                background: rgb(128, 0, 64); 
+                padding: 5px; 
+                display: block;
+                position: absolute;
+                left: 220px;
+                top: 25%;
+            }   
+
+            .block2:hover {
+                transform: scale(2);
+            }
+
+
+
+            .block3 { 
+                width: 200px; 
+                height: 200px; /*square*/
+                background: rgb(255, 0, 221); 
+                padding: 5px; 
+                display: block;
+                position: absolute;
+                left: 440px;
+                top: 25%;
+            }
+
+            .block3:hover {
+                transform: scaleX(2);
+            }
+
+            .block4 { 
+                width: 200px; 
+                height: 200px; /*square*/
+                background: rgb(255, 0, 0); 
+                padding: 5px; 
+                display: block;
+                position: absolute;
+                left: 660px;
+                top: 25%;
+            }
+            .block4:hover {
+                transform: scaleY(2);
+            }
+
+
+            .block5 { 
+                width: 200px; 
+                height: 200px; /*square*/
+                background: white; 
+                padding: 5px; 
+                border: solid 1px black; 
+                display: block;
+                position: absolute;
+                left: 880px;
+                top: 25%;
+            }
+
+            .block5:hover {
+                transform: translate(15px,15px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="block1">rotate.</div> 
+        <div class="block2">scale2.</div>
+        <div class="block3">X</div> 
+        <div class="block4">Y</div> 
+        <div class="block5">translate 5</div> 
+    </body>
+</html>

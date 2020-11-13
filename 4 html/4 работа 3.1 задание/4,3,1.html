@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Магазин</title>
+        <style>
+            .table_blur {
+            background: #f5ffff;
+            border-collapse: collapse;
+            text-align: left;
+            }
+            .table_blur th {
+            border-top: 1px solid #777777;	
+            border-bottom: 1px solid #777777; 
+            box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+            background: rgb(0, 0, 0);
+            color: white;
+            padding: 10px 15px;
+            position: relative;
+            }
+            .table_blur th:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 25%;
+            height: 25%;
+            width: 100%;
+            }
+            .table_blur tr:nth-child(odd) {
+            background: #ebf3f9;
+            }
+            .table_blur th:first-child {
+            border-left: 1px solid #777777;	
+            border-bottom:  1px solid #777777;
+            box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+            }
+            .table_blur th:last-child {
+            border-right: 1px solid #777777;
+            border-bottom:  1px solid #777777;
+            box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+            }
+            .table_blur td {
+            border: 1px solid #e3eef7;
+            padding: 10px 15px;
+            position: relative;
+            transition: all 0.5s ease;
+            }
+            .table_blur tbody:hover tr:hover td {
+            background: #f348ac; /* Цвет фона при наведении */
+                color: #fff; /* Цвет текста при наведении */
+            }
+        </style>
+    </head>
+    <body>
+        <table class="table_blur">
+            <tr>
+              <th>Company</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              </tr>
+            <tr>
+              <td>Вайфу</td>
+              <td>Ризе</td>
+              <td>Лили</td>
+              <td>Тамаки</td>
+              <td>Эллейн</td>
+              </tr>
+            <tr>
+              <td>Животное</td>
+              <td>Кошка</td>
+              <td>Собака</td>
+              <td>Енот</td>
+              <td>Лиса</td>
+              </tr>
+            <tr>
+              <td>Имба</td>
+              <td>Наруто</td>
+              <td>Саске</td>
+              <td>Мадара</td>
+              <td>Хаширама</td>
+              </tr>
+            <tr>
+              <td>Рыба</td>
+              <td>Осётр</td>
+              <td>Килька</td>
+              <td>Сёмга</td>
+              <td>Кафельник</td>
+              </tr>
+          </table>
+    </body>
+</html>
