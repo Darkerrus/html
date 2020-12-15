@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #plane 
+       {
+       position: relative;
+       cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <img id="plane" src="https://i.ytimg.com/vi/daGL-Ou2mZY/maxresdefault.jpg" width="200" height="150">
+    <script>
+        plane.onclick = function() 
+        {
+            let start = Date.now();
+            let timer = setInterval(function() 
+                {
+                    let timePassed = Date.now() - start;
+                    plane.style.left = timePassed / 5 + 'px';
+                    if (timePassed > 2000) clearInterval(timer);
+                }, 20);
+        }
+    </script>
+</body>
+</html>
