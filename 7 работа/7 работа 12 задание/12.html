@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tree span:hover 
+        {
+          font-weight: bold;
+        }
+        .tree span 
+        {
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+    <ul class="tree" id="tree">
+        <li>Мстители
+          <ul>
+            <li>Команда Капитана Америки
+              <ul>
+                <li>Человек муравей</li>
+                <li>Его друг Баки</li>
+                <li>Алая ведьма</li>
+                <li>Соколиный глаз</li>
+              </ul>
+            </li>
+            <li>Команда Железного Человека
+              <ul>
+                <li>Человек паук</li>
+                <li>Черная пантера</li>
+                <li>Вижен</li>
+                <li>Черная вдова</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Звездные войны
+          <ul>
+            <li>Джедаи
+              <ul>
+                <li>Люк Скайуокер</li>
+                <li>Чубака</li>
+                <li>Принцесса Леа</li>
+                <li>Оби-Ван Кеноби</li>
+              </ul>
+            </li>
+            <li>Ситхи
+              <ul>
+                <li>Дарт Сидиус</li>
+                <li>Дарт Вейдер</li>
+                <li>Дарт Мол</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <script>
+        for (let li of tree.querySelectorAll('li')) {
+          let span = document.createElement('span');
+          li.prepend(span);
+          span.append(span.nextSibling); }
+        tree.onclick = function(event) {
+          if (event.target.tagName != 'SPAN') {
+            return;
+          }
+          let childrenContainer = event.target.parentNode.querySelector('ul');
+          if (!childrenContainer) return; 
+          childrenContainer.hidden = !childrenContainer.hidden;
+        }
+      </script>
+</body>
+</html>

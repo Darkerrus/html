@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+		function hide()
+        {
+			elem = document.getElementById('test');
+			elem.style.display = 'none';
+		}
+		function show()
+        {
+			elem = document.getElementById('test');
+			elem.style.display = 'inline-block';
+		}
+	</script>
+</head>
+<body>
+    <input type="text" value="Текст" id="test">
+	<button onclick="hide()">Сюда</button>
+	<button onclick="show()">Ещё раз?</button>
+</body>
+</html>

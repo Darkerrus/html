@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		input 
+        {
+			width: 100px;
+		}
+	</style>
+	<script>
+		function go()
+        {
+			elem = document.getElementById('test');
+			elem.value = 'Текст был изменен';
+			elem.style.width = '400px';
+			elem.style.height = '80px';
+			elem.style.color = 'purple';
+			elem.style.borderRadius = '10px';
+		}
+	</script>
+</head>
+<body>
+    <input type="text" value="Текст" id="test"> 
+    <br>
+    <br>
+	<button onclick="go()">Сюда</button>
+</body>
+</html>

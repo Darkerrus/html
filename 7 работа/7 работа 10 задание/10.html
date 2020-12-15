@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body 
+    { 
+    margin: 10px auto; 
+    width: 470px; 
+    } 
+    
+    h3 
+    { 
+    margin: 0; 
+    padding-bottom: .3em; 
+    padding-right: 20px; 
+    font-size: 1.1em; 
+    } 
+    
+    p 
+    { 
+    margin: 0; 
+    padding: 0 0 .5em; 
+    } 
+    
+    .pane 
+    { 
+    background: rgb(129, 129, 78); 
+    padding: 10px 20px 10px; 
+    border-top: solid 2px #a6e744; 
+    position: relative; 
+    } 
+    
+    .remove-button { 
+    position: absolute; 
+    font-size: 110%; 
+    top: 0; 
+    color: rgb(0, 255, 42); 
+    right: 10px; 
+    display: block; 
+    width: 24px; 
+    height: 24px; 
+    border: none; 
+    background: transparent; 
+    cursor: pointer; 
+    }
+        </style>
+</head>
+<body>
+    <div> 
+        <div class="pane"> 
+            <h3>Верка Сердючка</h3> 
+            <p>А я иду такая вся в Дольче Габанна</p> 
+            <p>Я иду такая вся, на сердце рана</p>
+            <p>Слёзы душат-душат, я в плену обмана</p>
+            <p>Но иду такая вся в Дольче Габанна</p>
+            <p>Ла-ла-ла, уа-уа, ла-ла-ла</p>
+            <p>Ла-ла-ла, уа-уа, ла-ла-ла</p>
+            <p>Ла-ла-ла, уа-уа, ла-ла-ла</p>
+            <p>Ла-ла-ла, уа-уа, ла-ла-ла</p>
+            <p>Мне уже восемнадцать, в паспорт страшно смотреть</p>
+            <p>Он сказал - я красивее всех на планете</p>
+            <p>Почему ночью злой, не смогла сказать "Нет"</p>
+            <p>Дайте мне вина, у-а, ну дайте ж пачку сигарет</p>
+            <p>Почему были вместе, ты мне объясни?</p>
+            <p> У него Киевстар у меня UMC</p>
+            <p>Что такое любовь, кто откроет секрет?</p>
+            <p> Дайте мне вина, у-а, ну дайте ж пачку сигарет</p>
+        </div> 
+        <div class="pane"> 
+            <h3>Руки Вверх!</h3> 
+            <p>Ветер шумит негромко, листва шелестит в ответ</p> 
+            <p>Идет не спеша девчонка, девчонке шестнадцать лет</p>
+            <p>Но в свои лет шестнадцать, много узнала она</p>
+            <p>В крепких мужских объятьях столько ночей провела</p>
+            <p>Чужие губы тебя ласкают</p>
+            <p>Чужие губы шепчут тебе</p>
+            <p>Что ты одна, ты одна такая</p>
+            <p>Чужая стала сама себе</p>
+        </div> 
+        <div class="pane"> 
+            <h3>ВИА Гра</h3> 
+            <p>Давай останемся свободными</p>
+            <p>Шелка и маски бросим под ноги</p>
+            <p>И пусть в моих поступках не было логики</p>
+            <p>Я не умею жить по-другому!</p>
+            <p>Давай начнём движенье первыми</p>
+            <p>Сегодня я сыграю белыми</p>
+            <p>А ты иди вперёд своею дорогою</p>
+            <p>Спасайся в сумерках тёмных комнат</p>
+            <p>100 шагов назад, тихо на пальцах</p>
+            <p>Лети моя душа, не оставайся</p> 
+            <p>100 шагов назад, притяженья больше нет</p> 
+        </div> 
+        </div> 
+        
+        
+        <script> 
+        let panes = document.querySelectorAll('.pane'); 
+        
+        for(let pane of panes) 
+        { 
+        pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>'); 
+        pane.firstChild.onclick = () => pane.remove(); 
+        } 
+        </script> 
+</body>
+</html>

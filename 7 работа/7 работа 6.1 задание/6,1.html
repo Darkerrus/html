@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		input 
+        {
+			width: 200px;
+		}
+	</style>
+	<script>
+        function go()
+        {
+			var elements = document.getElementsByTagName('p');
+            for (var i = 0; i < elements.length; i++)
+            {
+				elements[i].innerHTML = 'Изменено';
+			}
+		}
+	</script>
+</head>
+<body>
+    <p>Пример</p>
+	<p>Пример ещё</p>
+	<h2>Без изменения</h2>
+	<input type="submit" value="Сюда"  onclick="go()">
+</body>
+</html>

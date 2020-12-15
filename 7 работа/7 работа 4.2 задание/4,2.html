@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		input 
+        {
+			width: 400px;
+			margin-bottom: 20px;
+		}
+	</style>
+	<script>
+		function block()
+        {
+			var block = document.getElementById('block');
+			var unblock = document.getElementById('unblock');
+			block.value = 'Пока нельзя';
+			block.disabled = true;
+			unblock.style.display = 'block';
+		}
+		function unblock()
+        {
+			var block = document.getElementById('block');
+			var unblock = document.getElementById('unblock');
+			block.value = 'Можешь жать';
+			block.disabled = false;
+			unblock.style.display = 'none';
+		}
+	</script>
+</head>
+<body>
+    <input type="submit" onclick="block(this)" value="Жми" id="block">
+	<input type="submit" onclick="unblock('button')" value="Жми, если хочешь жать" style="display: none;" id="unblock">
+</body>
+</html>

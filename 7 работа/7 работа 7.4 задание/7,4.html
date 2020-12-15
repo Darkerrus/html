@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		#wrapper, #test 
+        {
+			text-align: center;
+		}
+	</style>
+	<script>
+        function go()
+        {
+			window.timerId = window.setInterval(timer, 1000);
+		}
+        function timer()
+        {
+            if(window.number == undefined || window.number == 3)
+            {
+				window.number = 1;
+            } 
+            else window.number = window.number + 1;
+			var img = document.getElementById('img');
+			img.src = window.number + '.jpg'
+		}
+	</script>
+</head>
+<body onload="go()">
+    <div id="wrapper">
+		<img src="1.jpg" id="img">
+	</div>
+</body>
+</html>

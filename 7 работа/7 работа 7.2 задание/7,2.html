@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		input 
+        {
+			width: 200px;
+		}
+		#wrapper, #test 
+        {
+			text-align: center;
+		}
+		#test 
+        {
+			font-size: 24px;
+		}
+	</style>
+	<script>
+        function go()
+        {
+			window.timerId = window.setInterval(timer, 500);
+			document.getElementById('go').disabled = true;
+			document.getElementById('stop').disabled = false;
+		}
+        function stop()
+        {
+			window.clearInterval(window.timerId);
+			document.getElementById('go').disabled = false;
+			document.getElementById('stop').disabled = true;
+		}
+        function timer()
+        {
+			var test = document.getElementById('test');
+			test.innerHTML = parseInt(test.innerHTML)+1;
+		}
+	</script>
+</head>
+<body>
+    <div id="wrapper">
+		<p id="test">0</p>
+		<input type="submit" value="Сюда"  onclick="go()" id="go">
+		<input type="submit" value="Стоп"  onclick="stop()"  id="stop" disabled>
+	</div>
+</body>
+</html>
